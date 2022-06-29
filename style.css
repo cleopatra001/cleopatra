@@ -1,0 +1,1320 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Akshar:wght@300;400;500;600;700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&family=Artifika&family=Barlow+Condensed:ital,wght@0,800;0,900;1,400;1,800&family=Bebas+Neue&family=Cairo:wght@200;600&family=Chelsea+Market&family=Coiny&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Courgette&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Indie+Flower&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&family=Kdam+Thmor+Pro&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Macondo&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&family=Secular+One&family=Shadows+Into+Light&family=Spline+Sans+Mono:wght@300;400;500;600;700&family=Staatliches&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Anek Malayalam;
+    background-image: linear-gradient(250deg, #ef32d9, #89fffd);
+    display: flex;
+    justify-content: center;
+}
+
+.home-page {
+    width: 94%;
+    height: 95vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.home-page header {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page header h2 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+}
+
+.home-page header h2 span {
+    width: fit-content;
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+    box-shadow: -3px 2px 8px rgba(0, 0, 0, 1);
+    margin-right: 0.05em;
+    border-radius: 0.2em;
+}
+
+.home-page .nav {
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.home-page .nav :checked ~ ul {
+    transform: scalex(1);
+}
+.home-page .nav ul {
+    list-style: none;
+    width: 100%;
+    height: 40%;
+    margin-top: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -10px 5px 15px black;
+    background-image: linear-gradient(250deg, #ef32d9, #89fffd);
+    border-radius: 1em 0em 0 1em;
+    overflow: hidden;
+    transform: scalex(0);
+    transform-origin: right;
+    transition:transform  0.7s;
+    z-index: 99;
+
+}
+.home-page .nav ul::after{
+    content: '';
+    position: absolute;
+    top: -45%;
+    right: -90%;
+    width: 200%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+}
+
+.home-page .nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 0.2em 0;
+    display: block;
+}
+
+.home-page .nav ul li a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.home-page .nav input {
+    appearance: none;
+    display: none;
+}
+
+.home-page .nav label {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 2px black;
+    position: absolute;
+    top: 0em;
+    right: 1em;
+    z-index: 99;
+}
+
+.home-page .nav label img {
+    width: 2em;
+    transition: transform 0.5s;
+}
+.home-page .nav :checked ~ label img{
+    transform: rotate(135deg);
+}
+
+
+.home-page .container{
+    width: 100%;
+    height: calc(100% - 3em);
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 1em;
+}
+.home-page .container .title{
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    padding:1em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    
+}
+.home-page .container .title p{
+ font-weight: 600;
+ color: white;
+}
+.home-page .container .title p:last-child{
+    font-size: 1.2em;
+    width: 90%;
+}
+.home-page .container .title  h1{
+    font-size: 4em;
+}
+.home-page .container .title span{
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.home-page .container .title .link{
+width: 100%;
+display: flex;
+align-items: center;
+margin-top: 1em;
+
+}
+.home-page .container .title .link h4{
+font-size: 1.4em;
+}
+.home-page .container .title .link a img{
+display: block;
+width: 2em;
+margin-right: 1em;
+filter: drop-shadow(0 0 15px  black);
+animation: telegram-move 2s infinite linear;
+
+}
+
+@keyframes telegram-move  {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform:scale(0.95);
+        filter: drop-shadow(0 0 20px  blue);
+    }
+
+    100% {
+        transform:scale(0.8);
+    }
+}
+.home-page .container .img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.home-page .container .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*******************produits-page**********************/
+.produits-container{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+
+}
+.produits-container .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 1em;
+}
+.produits-container .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.produits-container .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.produits-container .all-box{
+    width: 100%;
+    height: calc(100% -3.5em );
+    margin-top: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+.produits-container .all-box .box{
+    width: 100%;
+    height: 22em;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), -5px 5px 20px rgba(0, 0, 0, 0.959);
+    border-radius: 4em 1em ;
+    
+}
+.produits-container .all-box .box .image{
+    width: 100%;
+    height:90%;
+    overflow: hidden;
+    position: relative;
+}
+.produits-container .all-box .box .image img{
+    width: 100%;
+    height: 100%;object-fit: cover;
+    object-position: right;
+    animation: move-img 10s infinite linear;
+}
+
+@keyframes move-img  {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform:scale(2);
+      
+    }
+
+    100% {
+        transform:scale(1);
+    }
+}
+.produits-container .all-box .box.box:nth-child(1)  .image img{
+    animation: move-img-1 10s infinite linear;
+}
+@keyframes move-img-1  {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform:scale(2) translatex(10%);
+      
+    }
+
+    100% {
+        transform:scale(1);
+    }
+}
+
+.produits-container .all-box .box.box:nth-child(6)  .image img{
+    animation: move-img-6 10s infinite linear;
+}
+@keyframes move-img-6  {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform:scale(2) translateY(-20%);
+      
+    }
+
+    100% {
+        transform:scale(1);
+    }
+}
+.produits-container .all-box .box:nth-child(5) .image img{
+    object-position: center;
+}
+.produits-container .all-box .box .info{
+    width: 100%;
+    height: 10%;
+    padding: 0 1em;
+    text-align: center;
+    background-color: white;
+}
+.produits-container .all-box .box .info a{
+    display: block;
+    font-size: 1.4em;
+    color: black;
+    letter-spacing: 0.2em;
+}
+.produits-container .all-box .box .info a::first-letter{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.produits-container .all-box .box:nth-child(3) a{
+font-size: 1.1em;
+}
+
+/*******************sérume-page**********************/
+.sérume{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(siromm.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.sérume .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 1em;
+}
+.sérume .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.sérume .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.sérume .cards{
+    width: 100%;
+    height: calc(100% - 3.5em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.sérume .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.sérume .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.sérume .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.sérume .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.sérume .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+
+}
+.sérume .cards .card .info p {
+    font-size: 1.2em;
+}
+.sérume .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.sérume .cards .card input{
+display: none;
+}
+.sérume .cards .card :checked ~ .info{
+    height:5em ;
+    padding: 1em;
+  
+}
+/*******************créme-page**********************/
+.créme{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(cerem.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.créme .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 1em;
+}
+.créme  .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.créme .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.créme .cards{
+    width: 100%;
+    height: calc(100% - 3.5em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.créme .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.créme .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.créme .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.créme .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.créme .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+
+}
+.créme .cards .card .info p {
+    font-size: 1.2em;
+}
+.créme .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.créme .cards .card input{
+display: none;
+}
+.créme .cards .card :checked ~ .info{
+    height:5em ;
+    padding: 1em;
+  
+}
+
+
+
+/*******************mask-page**********************/
+.mask{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(mask.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.mask .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 0em;
+}
+.mask  .title h2{
+    font-size: 1.9em;
+    text-transform: capitalize;
+
+}
+.mask .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.mask .cards{
+    width: 100%;
+    height: calc(100% - 3.5em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.mask .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.mask .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.mask .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.mask .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.mask .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+
+}
+.mask .cards .card .info p {
+    font-size: 1.2em;
+}
+.mask .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.mask .cards .card input{
+display: none;
+}
+.mask .cards .card :checked ~ .info{
+    height:5em ;
+    padding: 1em;
+  
+}
+
+/*******************champo-page**********************/
+.champo{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(shampoo.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.champo .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+.champo  .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.champo .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.champo .cards{
+    width: 100%;
+    height: calc(100% - 3.5em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.champo .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.champo .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.champo .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.champo .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.champo .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+
+}
+.champo .cards .card .info p {
+    font-size: 1.2em;
+}
+.champo .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.champo .cards .card input{
+display: none;
+}
+.champo .cards .card :checked ~ .info{
+    height:5em ;
+    padding: 1em;
+  
+}
+
+
+/*******************savon-page**********************/
+.savon{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(savone.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.savon .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+.savon  .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.savon .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.savon .cards{
+    width: 100%;
+    height: calc(100% - 3.5em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.savon .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.savon .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.champo .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.savon .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.savon .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+
+}
+.savon .cards .card .info p {
+    font-size: 1.2em;
+}
+.savon .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.savon .cards .card input{
+display: none;
+}
+.savon .cards .card :checked ~ .info{
+    height:5em ;
+    padding: 1em;
+  
+}
+
+
+
+/*******************lotion-page**********************/
+.lotion{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(lotion.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.lotion .title{
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+.lotion  .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.lotion .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.lotion .cards{
+    width: 100%;
+    height: calc(100% - 3.5em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.lotion .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.lotion .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.lotion .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.lotion .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.lotion .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+
+}
+.lotion .cards .card .info p {
+    font-size: 1.2em;
+}
+.lotion .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.lotion .cards .card input{
+display: none;
+}
+.lotion .cards .card :checked ~ .info{
+    height:5em ;
+    padding: 1em;
+  
+}
+
+
+
+
+/*******************huils-page**********************/
+.huils{
+    width: 94%;
+    min-height: 100vh;
+    margin-top: 2.5vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.4),
+        -5px -5px 15px rgba(0, 0, 0, 0.6),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    background: url(cute.jpg);
+    background-size: cover;
+    animation:  Move-Back 20s infinite linear;
+}
+@keyframes Move-Back{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
+
+.huils .title{
+    width: 100%;
+    height: 8em;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+.huils  .title h2{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.huils .title h2::first-letter{
+color: #ef32d9;
+font-size: 1.4em;
+}
+.huils .cards{
+    width: 100%;
+    height: calc(100% - 8em);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    padding: 1.5em 1em;
+}
+.huils .cards .card{
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0 15px black;
+border-radius: 0.7em;
+}
+.huils .cards .card .first-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em 0 ;
+    text-align: center;
+
+}
+.huils .cards .card .first-title h2{
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+    border-radius: 50%;
+    font-size: 1.8em;
+    pointer-events: none;
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 5px black;
+}
+.huils .cards .card .first-title h3{
+    pointer-events: none;
+}
+
+.huils .cards .card .info{
+height: 0;
+overflow: hidden;
+transition: all 0.7s;
+}
+.huils .cards .card :checked ~ .info {
+height: 5em;
+padding: 1em;
+}
+
+.huils .cards .card .info p {
+    font-size: 1.2em;
+}
+.huils .cards .card .info p span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.huils .cards .card input{
+    display: none;
+    }
+    
+
+/************all-page for more style************/
+.di .cards .card .info h3{
+    pointer-events: none;
+}
+.di .cards .card label .more img{
+    width: 2em;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+    }
+    
+    
+.di .cards .card :checked ~ label .more img{
+    transform: rotate(270deg);
+}
+
+.di .cards .card .info {
+position: relative;
+z-index: 1;
+}
+
+.di .cards .card .info::before{
+    content: '';
+    position: absolute;
+    top:0 ;
+    left: -100%;
+    width: 100%;
+    height: 0.2em;
+    background-color: black;
+    transition: 1s;
+    z-index: -1;
+
+} 
+.di .cards .card :checked ~ .info::before{
+left: 0;
+}
+.di .cards .card .info::after{
+    content: '';
+    position: absolute;
+    bottom:100% ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.8s;
+    z-index: -2;
+
+} 
+.di .cards .card :checked ~ .info::after{
+    bottom: 0;
+}
+/************gold-page***********/
+.gold-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1em;
+    position: relative;
+    z-index: 1;
+}
+.gold-page h2{
+    font-size: 4em;
+}
+.gold-page .animation-gold-page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    z-index: -1;
+    bottom: 00%;
+ 
+}
+.gold-page .animation-gold-page img{
+    position: absolute;
+    bottom: 0;
+}
+.gold-page .animation-gold-page img:nth-child(1){
+    animation: gold-page 3s infinite linear; 
+    left: 0;
+}
+.gold-page .animation-gold-page img:nth-child(2){
+    animation: gold-page 5s infinite linear; 
+    left: 10%;
+}
+.gold-page .animation-gold-page img:nth-child(3){
+    animation: gold-page 4s infinite linear;
+    left: 15%; 
+}
+.gold-page .animation-gold-page img:nth-child(4){
+    animation: gold-page 7s infinite linear; 
+    left: 25%;
+}
+.gold-page .animation-gold-page img:nth-child(5){
+    animation: gold-page 6s infinite linear; 
+    left: 30%;
+}
+.gold-page .animation-gold-page img:nth-child(6){
+    animation: gold-page 2s infinite linear; left: 5%;
+}
+.gold-page .animation-gold-page img:nth-child(7){
+    animation: gold-page 8s infinite linear; 
+    left: 35%;
+}
+.gold-page .animation-gold-page img:nth-child(8){
+    animation: gold-page 8s infinite linear; 
+    left: 40%;
+}
+.gold-page .animation-gold-page img:nth-child(9){
+    animation: gold-page 6s infinite linear; 
+    left: 45%;
+}
+.gold-page .animation-gold-page img:nth-child(10){
+    animation: gold-page 4s infinite linear; 
+    left:50%;
+}
+.gold-page .animation-gold-page img:nth-child(11){
+    animation: gold-page 8s infinite linear; 
+    left: 65%;
+}
+.gold-page .animation-gold-page img:nth-child(12){
+    animation: gold-page 5s infinite linear; 
+    left: 60%;
+}
+.gold-page .animation-gold-page img:nth-child(13){
+    animation: gold-page 6s infinite linear; 
+    left: 70%;
+}
+.gold-page .animation-gold-page img:nth-child(14){
+    animation: gold-page 3s infinite linear; 
+    left: 80%;
+    
+}
+
+@keyframes gold-page{
+    0%{
+        transform: scale(0.2);
+    }
+    25%{
+        transform: scale(0.4);
+        bottom: 25%;
+    }
+    75%{
+        transform: scale(0.6);
+        bottom: 75%;
+    }
+    50%{
+        transform: scale(0.8);
+        bottom: 50%;
+    }
+    100%{
+        transform: scale(1);
+        bottom: 100%;
+    }
+
+}
+
+
+
+
+
+
+/************media***********/
+@media (min-width:300px) and (max-width:350px){
+    .produits-container .all-box{
+        padding:1em 1.5em ;
+    }
+}
+ 
